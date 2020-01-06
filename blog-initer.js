@@ -14,17 +14,37 @@
 })();
 $(function(){
     /*获取博客ID值*/
+    /*@Deprecated*/
     function loadNetBlogId(){
         var dom=$("script:contains(getFollowStatus)");
-        if(dom.size==0){
+        if(dom.size()==0){
             throw "getFollowStatus为空值";
         }
         return dom.html().replace("getFollowStatus('","").replace("');","");
     };
+    var recordBlobId;
+    /*带回调的读取博客ID*/
+    function loadNetBlogIdBack(cback){
+        if(recordBlobId){
+            cback?cback(recordBlobId):'';
+        }
+        $.ajax({
+            url: getAjaxBaseUrl() + "news.aspx",
+            type: "get",
+            dataType: "text",
+            success: function(n) {
+                if((/<script>(.*?)<\/script>/g).exec(str)!=null){
+                    var id=RegExp.$1.replace("getFollowStatus('","").replace("');","");
+                    recordBlobId=id;
+                    cback?cback(id):''
+                }
+            }
+        })
+    }
     /*获取博客名称*/
     function loadNetBlogName(){
         var dom=$("#Header1_HeaderTitle");
-        if(dom.size==0){
+        if(dom.size()==0){
             throw "Header1_HeaderTitle为空值";
         }
         return dom.html();
@@ -100,9 +120,13 @@ $(function(){
         })
         closetTmpDom.click();
         $(sidebarNews).prepend(closetTmpDom);
+
         /*添加导航栏关注我按钮*/
-        var focusTmpDom=$("<a href=\"javascript:void(0)\" class=\"focusMeBtn\" onclick=\"follow('"+loadNetBlogId()+"')\">+加关注</a>");
-        $(sidebarNews).append(focusTmpDom);
+        loadNetBlogIdBack(function(blobid){
+            var focusTmpDom=$("<a href=\"javascript:void(0)\" class=\"focusMeBtn\" onclick=\"follow('"+blobid+"')\">+加关注</a>");
+            $(sidebarNews).append(focusTmpDom);
+        })
+
         /*初始化自动关闭菜单时间*/
         $("body").click(function(e){
             //3个控件值
@@ -222,29 +246,31 @@ $(function(){
     })();
     /*初始化页脚*/
     (function(){
-        var rightMenu=$("<div class=\"right-menu\"></div>");
-        var iconHtml="";
-        if(isPostDetail()){
-            iconHtml+="<span class=\"iconfont icon-zan right-zan\" onclick=\""+loadDiggitAttr()+"\"></span>"
-        }
-        iconHtml+="<span class=\"iconfont icon-heart right-heart\" onclick=\"follow('"+loadNetBlogId()+"')\"></span>"
-        iconHtml+="<span class=\"iconfont icon-downbot right-arrow\"></span>"
-        $("#home").before(rightMenu);
-        rightMenu.html(iconHtml);
-        rightMenu.find(".right-arrow").click(function(e){
-            if($(e.currentTarget).hasClass("right-arrow-rotate")){//向上
-                $("html").animate({scrollTop:0},450)
-            }else{//向下
-                $("html").animate({scrollTop:$(document).height()},450)
+        loadNetBlogIdBack(function(blobId){
+            var rightMenu=$("<div class=\"right-menu\"></div>");
+            var iconHtml="";
+            if(isPostDetail()){
+                iconHtml+="<span class=\"iconfont icon-zan right-zan\" onclick=\""+loadDiggitAttr()+"\"></span>"
             }
+            iconHtml+="<span class=\"iconfont icon-heart right-heart\" onclick=\"follow('"+blobId+"')\"></span>"
+            iconHtml+="<span class=\"iconfont icon-downbot right-arrow\"></span>"
+            $("#home").before(rightMenu);
+            rightMenu.html(iconHtml);
+            rightMenu.find(".right-arrow").click(function(e){
+                if($(e.currentTarget).hasClass("right-arrow-rotate")){//向上
+                    $("html").animate({scrollTop:0},450)
+                }else{//向下
+                    $("html").animate({scrollTop:$(document).height()},450)
+                }
+            })
+            $(window).scroll(function(event){
+                if($(document).scrollTop() >= $(window).height()-35){
+                    $(".right-arrow").addClass("right-arrow-rotate");
+                }else{
+                    $(".right-arrow").removeClass("right-arrow-rotate");
+                }
+            });
         })
-        $(window).scroll(function(event){
-            if($(document).scrollTop() >= $(window).height()-35){
-                $(".right-arrow").addClass("right-arrow-rotate");
-            }else{
-                $(".right-arrow").removeClass("right-arrow-rotate");
-            }
-        });
     })();
     /*初始化签名*/
     (function(){
