@@ -179,16 +179,26 @@ a{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-#sideBar .sidebar-block:nth-child(2n+0) ul li:before{
-    content: "\e690";
-}
-#sideBar .sidebar-block:nth-child(3n+0) ul li:before{
+#sideBar #sidebar_shortcut ul li:before{
     content: "\e600";
 }
-#sideBar .sidebar-block:nth-child(5n+0) ul li:before{
-    content: "\e60e";
+#sideBar #sidebar_recentposts ul li:before{
+    content: "\e690";
 }
 
+#sideBar #sidebar_scorerank ul li:before{
+    content: "\e683";
+}
+
+#sideBar #sidebar_postcategory ul li:before{
+    content: "\e60e";
+}
+#sideBar #sidebar_postarchive ul li:before{
+    content: "\e666";
+}
+#sideBar #sidebar_topviewedposts ul li:before{
+    content: "\e608";
+}
 
 /*主页入口显示头*/
 .main-header {
