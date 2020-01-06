@@ -1,16 +1,18 @@
 /*启动动画*/
 (function(){
-    var loading=$('<div id="loading">'+
-        '<div id="loading-center">'+
-        '<div id="loading-center-absolute">'+
-        '<div class="object" id="object_four"></div>'+
-        '<div class="object" id="object_three"></div>'+
-        '<div class="object" id="object_two"></div>'+
-        '<div class="object" id="object_one"></div>'+
-        '</div>'+
-        '</div>'+
-        '</div>');
-    $("body").prepend(loading);
+    if($("#loading").size()==0){
+        var loading=$('<div id="loading">'+
+            '<div id="loading-center">'+
+            '<div id="loading-center-absolute">'+
+            '<div class="object" id="object_four"></div>'+
+            '<div class="object" id="object_three"></div>'+
+            '<div class="object" id="object_two"></div>'+
+            '<div class="object" id="object_one"></div>'+
+            '</div>'+
+            '</div>'+
+            '</div>');
+        $("body").prepend(loading);
+    }
 })();
 $(function(){
     /*获取博客ID值*/
@@ -32,7 +34,7 @@ $(function(){
             url: getAjaxBaseUrl() + "news.aspx",
             type: "get",
             dataType: "text",
-            success: function(n) {
+            success: function(str) {
                 if((/<script>(.*?)<\/script>/g).exec(str)!=null){
                     var id=RegExp.$1.replace("getFollowStatus('","").replace("');","");
                     recordBlobId=id;
@@ -360,7 +362,6 @@ $(function(){
             console.log($(e.target).closest("code").html())
         })
     })();
-
     setTimeout(function(){
         $("#loading").fadeOut(500);
     },50);
