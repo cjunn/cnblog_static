@@ -39,15 +39,15 @@ window._static_ ={
     _static_.poetry=poetrys[Math.floor(Math.random()*poetrys.length)];
     /*背景随机*/
     var backgroundImgs=[
-        "https://w.wallhaven.cc/full/wy/wallhaven-wymo2p.jpg",
-        "https://w.wallhaven.cc/full/2e/wallhaven-2e37y9.jpg",
-        "https://w.wallhaven.cc/full/13/wallhaven-13dv2g.jpg",
-        "https://w.wallhaven.cc/full/4g/wallhaven-4gj334.jpg",
-        "https://w.wallhaven.cc/full/j5/wallhaven-j5y525.jpg",
-        "https://w.wallhaven.cc/full/wy/wallhaven-wyomo6.jpg",
-        "https://w.wallhaven.cc/full/r2/wallhaven-r2yjg1.jpg",
-        "https://w.wallhaven.cc/full/4d/wallhaven-4d38m0.jpg",
-        "https://w.wallhaven.cc/full/13/wallhaven-13dv2g.jpg",
-        "https://w.wallhaven.cc/full/83/wallhaven-83dkk1.jpg"];
+        "https://cdn.jsdelivr.net/gh/cjunn/cnblog_static@1.5/bg1.jpg",
+        "https://cdn.jsdelivr.net/gh/cjunn/cnblog_static@1.5/bg2.jpg",
+        "https://cdn.jsdelivr.net/gh/cjunn/cnblog_static@1.5/bg3.jpg",
+        "https://cdn.jsdelivr.net/gh/cjunn/cnblog_static@1.5/bg4.jpg",
+        "https://cdn.jsdelivr.net/gh/cjunn/cnblog_static@1.5/bg5.jpg",
+        "https://cdn.jsdelivr.net/gh/cjunn/cnblog_static@1.5/bg6.jpg",
+        "https://cdn.jsdelivr.net/gh/cjunn/cnblog_static@1.5/bg7.jpg",
+        "https://cdn.jsdelivr.net/gh/cjunn/cnblog_static@1.5/bg8.jpg",
+        "https://cdn.jsdelivr.net/gh/cjunn/cnblog_static@1.5/bg9.jpg"
+    ];
     _static_.backgroundImg=backgroundImgs[Math.floor(Math.random()*backgroundImgs.length)];
 })();
