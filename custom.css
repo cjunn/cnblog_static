@@ -774,8 +774,8 @@ div#green_channel img {
 
 #tbCommentBody {
     width: 100%!important;
+    overflow:hidden;
 }
-
 
 .commentbox_title {
     width: 100%
