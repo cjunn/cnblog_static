@@ -1085,9 +1085,10 @@ div#green_channel img {
     font-size:8px;
     content:"................................................................................................................................................................";
     color:rgba(200,200,200,0.4);
-    top:-5px;
-    padding-left:10px;
-    padding-right:10px;
+    position:relative;
+    top:-3px;
+    padding-left:5px;
+    padding-right:5px;
 }
 #mainContent .forFlow .PostListTitle{
     padding-top:20px;
@@ -1169,6 +1170,7 @@ body{
 }
 
 #mainContent .forFlow #taglist_main #taglist_title_wrap #taglist_title{
+    font-size:14px;
     padding:0px;
     margin:0px;
     color:rgba(20,20,20,0.7);
@@ -1178,7 +1180,7 @@ body{
     content:"................................................................................................................................................................";
     color:rgba(200,200,200,0.4);
     position:relative;
-    top:-5px;
-    padding-left:10px;
-    padding-right:10px;
+    top:-3px;
+    padding-left:5px;
+    padding-right:5px;
 }

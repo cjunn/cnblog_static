@@ -102,6 +102,10 @@ $(function(){
         $(document).unbind('mousewheel');
         $("#main-mask").hide();
     }
+    /*更换遮罩大小*/
+    $(window).resize(function(){
+        $("#main-mask").css({"height":$(document).height(),"width":$(document).width()});
+    });
     /*初始化遮罩*/
     (function(){
         var shadeDom=$("<div id=\"main-mask\"></div>");
