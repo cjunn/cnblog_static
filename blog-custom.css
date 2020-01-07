@@ -1130,7 +1130,7 @@ div#green_channel img {
     color:#2daebf;
 }
 #mainContent #myposts .PostList .postTitl2 a:hover{
-    color:#ff6600
+    color:#ff6600;
 }
 
 #mainContent #myposts .PostList .postTitl2{
@@ -1178,6 +1178,85 @@ body{
 #mainContent .forFlow #taglist_main #taglist_title_wrap #taglist_title:before,#taglist_title:after{
     font-size:2px;
     content:"................................................................................................................................................................";
+    color:rgba(200,200,200,0.4);
+    position:relative;
+    top:-3px;
+    padding-left:5px;
+    padding-right:5px;
+}
+
+/*档案*/
+#mainContent .forFlow .entrylist{
+
+}
+#mainContent .forFlow .entrylist .entrylistTitle{
+    display:inline-block;
+    position:relative;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    overflow:hidden;
+    font-size:14px;
+    padding:0px;
+    margin:0px;
+    margin-top:20px;
+    color:rgba(20,20,20,0.7);
+    white-space:nowrap;
+
+}
+
+#mainContent .forFlow .entrylist .entrylistTitle:before,#mainContent .forFlow .entrylist .entrylistTitle:after{
+    font-size:2px;
+    content:"................................................................................................................................................................";
+    color:rgba(200,200,200,0.4);
+    position:relative;
+    top:-3px;
+    padding-left:5px;
+    padding-right:5px;
+}
+#mainContent .forFlow .entrylist .entrylistItem{
+    padding-top:30px;
+}
+#mainContent .forFlow .entrylist .entrylistItem .entrylistPosttitle{
+    margin-bottom:10px;
+}
+#mainContent .forFlow .entrylist .entrylistItem .entrylistPosttitle a{
+    font-size: 2.0rem;
+    color:rgba(0,0,0,0.8);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+#mainContent .forFlow .entrylist .entrylistItem .entrylistPosttitle a:hover{
+    color:rgba(0,0,0,0.95)
+}
+
+#mainContent .forFlow .entrylist .entrylistItem .entrylistPostSummary{
+    font-size: 16px;
+    color:rgba(0,0,0,0.8);
+    font-family: Merriweather,"Open Sans","Microsoft Jhenghei","Microsoft Yahei",sans-serif;
+    line-height: 1.5;
+    margin-bottom:10px;
+}
+#mainContent .forFlow .entrylist .entrylistPostSummary a{
+    color:#2daebf;
+}
+#mainContent .forFlow .entrylist .entrylistPostSummary a:hover{
+    color:#ff6600;
+}
+
+#mainContent .forFlow .entrylist .entrylistItemPostDesc{
+    font-size:15px;
+    color:rgba(0,0,0,0.6);
+    padding-bottom:20px;
+}
+#mainContent .forFlow .entrylist .entrylistItemPostDesc a{
+    font-size:15px;
+    color:rgba(0,0,0,0.8)
+}
+
+#mainContent .forFlow .entrylist .entrylistItem:after{
+    font-size:2px;
+    content:"........................................................................................................................................................................................................................................................................................................................................";
     color:rgba(200,200,200,0.4);
     position:relative;
     top:-3px;
