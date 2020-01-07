@@ -91,7 +91,7 @@ a{
 }
 /*菜单栏-头像栏*/
 #sidebar_news {
-    background: #000 url('./headBackImg.jpg') center no-repeat;
+    background: #000 url('./blog-head.jpg') center no-repeat;
     background-size: 100%;
     padding-top:15px;
     padding-bottom:25px;
