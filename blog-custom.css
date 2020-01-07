@@ -770,8 +770,8 @@ div#green_channel img {
 .feedback_area_title,#commentform_title,.entrylistTitle {
     border-bottom: 0
 }
-
-.feedback_area_title:after,#commentform_title:after,.entrylistTitle:after {
+/*,.entrylistTitle:after*/
+.feedback_area_title:after,#commentform_title:after {
     content: '';
     display: block;
     width: 100%;
