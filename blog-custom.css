@@ -39,7 +39,7 @@ body{
     padding:0px;
     margin:0px;
     background:rgb(250,250,250);
-    font-family: 'PingFang SC','Helvetica Neue','Helvetica','Arial',sans-serif;
+    font-family: "Merriweather","Open Sans","Microsoft Jhenghei","Microsoft Yahei",sans-serif !important;
 }
 a{
     text-decoration:none;
@@ -1072,11 +1072,113 @@ div#green_channel img {
     margin:0px;
     padding:0px;
 }
+/*主题内容*/
+#topics {
+    font-family: -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif;
+}
 
-/*右侧导航栏*/
-#toc{
-    left:calc(50% + 442px);
-    padding-top:0px;
-    margin-top:0px;
-    z-index:0;
+#mainContent .forFlow{
+    position:relative;
+    overflow:hidden;
+}
+#mainContent .forFlow .PostListTitle:before,.PostListTitle:after{
+    font-size:8px;
+    content:"................................................................................................................................................................";
+    color:rgba(200,200,200,0.4);
+    top:-5px;
+    padding-left:10px;
+    padding-right:10px;
+}
+#mainContent .forFlow .PostListTitle{
+    padding-top:20px;
+    font-size:14px;
+    color:#3a4145;
+    display:inline-block;
+    position:relative;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    margin-bottom:0px;
+    overflow:hidden;
+    white-space:nowrap;
+    color:rgba(20,20,20,0.7)
+}
+#mainContent .forFlow .pager{
+    margin:0px;
+    padding:0px;
+}
+
+#mainContent #myposts {
+    margin-left:0px;
+    padding-bottom:10px;
+}
+
+#mainContent #myposts .PostList{
+    margin:0px;
+    margin-top:20px;
+    margin-bottom:0px;
+    padding-bottom:0px;
+}
+#mainContent #myposts .PostList:after{
+    font-size:2px;
+    content:"................................................................................................................................................................................................................................................................................................................................................................................................";
+    color:rgba(200,200,200,0.4);
+}
+
+#mainContent #myposts .PostList .postTitl2 a{
+    color:#2daebf;
+}
+#mainContent #myposts .PostList .postTitl2 a:hover{
+    color:#ff6600
+}
+
+#mainContent #myposts .PostList .postTitl2{
+    display:inline-block;
+}
+
+#mainContent #myposts .PostList .postDesc2{
+    display:inline-block;
+    float:right;
+    color:#5a6165;
+}
+
+
+
+body{
+    font-family: "Merriweather","Open Sans","Microsoft Jhenghei","Microsoft Yahei",sans-serif ;
+}
+
+
+/*我的TAG*/
+#mainContent .forFlow{
+    padding-bottom:30px;
+}
+#mainContent .forFlow #taglist_main{
+    padding:0px;
+    margin:0px;
+}
+#mainContent .forFlow #taglist_main #taglist_title_wrap{
+    display:inline-block;
+    position:relative;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    margin-top:20px;
+    overflow:hidden;
+    white-space:nowrap;
+}
+
+#mainContent .forFlow #taglist_main #taglist_title_wrap #taglist_title{
+    padding:0px;
+    margin:0px;
+    color:rgba(20,20,20,0.7);
+}
+#mainContent .forFlow #taglist_main #taglist_title_wrap #taglist_title:before,#taglist_title:after{
+    font-size:2px;
+    content:"................................................................................................................................................................";
+    color:rgba(200,200,200,0.4);
+    position:relative;
+    top:-5px;
+    padding-left:10px;
+    padding-right:10px;
 }
