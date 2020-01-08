@@ -362,9 +362,8 @@ $(function(){
         var codes=$("#cnblogs_post_body pre code");
         codes.append("<span class=\"hideIcon\"> </span>")
         codes.find(".hideIcon").click(function(e){
-            //TODO
-            console.log($(e.target).closest("code").html())
-        })
+            window.clipboardData.setData("Text",$(e.target).closest("code").text());
+        });
     })();
     setTimeout(function(){
         $("#loading").fadeOut(500);
