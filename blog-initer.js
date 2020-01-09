@@ -15,6 +15,15 @@
     }
 })();
 $(function(){
+    /*复制到粘贴板*/
+    function copyToClip(content) {
+        var aux = document.createElement("input");
+        aux.setAttribute("value", content);
+        document.body.appendChild(aux);
+        aux.select();
+        document.execCommand("copy");
+        document.body.removeChild(aux);
+    }
     /*获取博客ID值*/
     /*@Deprecated*/
     function loadNetBlogId(){
@@ -362,8 +371,19 @@ $(function(){
         var codes=$("#cnblogs_post_body pre code");
         codes.append("<span class=\"hideIcon\"> </span>")
         codes.find(".hideIcon").click(function(e){
-            window.clipboardData.setData("Text",$(e.target).closest("code").text());
+            copyToClip($(e.target).closest("code").text());
         });
+    })();
+    /*初始化a标签title*/
+    (function(){
+        function setTitle(i,e){
+            var text=$(e).text();
+            $(e).attr("title",text);
+        }
+        /*最新随笔*/
+        $("#sidebar_recentposts a").each(setTitle);
+        /*阅读排行榜*/
+        $("#TopViewPostsBlock a").each(setTitle);
     })();
     setTimeout(function(){
         $("#loading").fadeOut(500);
