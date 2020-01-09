@@ -17,8 +17,8 @@
 $(function(){
     /*复制到粘贴板*/
     function copyToClip(content) {
-        var aux = document.createElement("input");
-        aux.setAttribute("value", content);
+        var aux = document.createElement("textarea");
+        aux.value = content;
         document.body.appendChild(aux);
         aux.select();
         document.execCommand("copy");
