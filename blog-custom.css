@@ -544,7 +544,7 @@ a{
 }
 #cnblogs_post_body pre code .hideIcon{
     display:block;
-    position:absolute;
+    position:relative;
     right:-2px;
     top:-1px;
     z-index:1;
