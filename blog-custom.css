@@ -553,6 +553,10 @@ a{
     height:20px
 }
 
+#cnblogs_post_body ol li {
+    margin-bottom: 3px;
+}
+
 
 /*分类样式*/
 
