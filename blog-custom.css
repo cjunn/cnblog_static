@@ -1282,8 +1282,17 @@ body{
     margin-top:10px;
     font: normal normal 14px/35px "Microsoft YaHei";
 }
+#blog-comments-placeholder .feedbackItem{
+
+}
+#blog-comments-placeholder .feedbackItem:not(:nth-last-child(2)):after{
+    font-size:2px;
+    content:"..........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................";
+    color:rgba(200,200,200,0.4);
+
+}
 #blog-comments-placeholder .feedbackItem .feedbackListSubtitle {
-    font-size:15px;
+    font-size:14px;
     color: rgba(80,80,80,0.8);
     padding-bottom:4px;
 }
@@ -1295,6 +1304,17 @@ body{
     color:#ff6600!important;
     cursor:pointer;
 }
+#blog-comments-placeholder .feedbackItem .feedbackListSubtitle .comment_actions a:first-child{
+    padding-right:2px;
+}
+#blog-comments-placeholder .feedbackItem .feedbackCon{
+    position:relative;
+}
+
+#blog-comments-placeholder .feedbackItem .comment_vote a:last-child{
+    padding-left:2px;
+}
+
 #blog-comments-placeholder .feedbackItem .feedbackCon .blog_comment_body{
     overflow:visible;
 }
@@ -1303,13 +1323,14 @@ body{
     padding-right:0px;
     font-size:14px;
     color: rgba(80,80,80,0.8);
+    display:inline-block;
+    float:right;
 }
 #comment_form #comment_nav{
     margin:0px;
     padding:0px;
-    margin-top:10px;
     position:relative;
-    top:10px;
+    top:15px;
 }
 
 #comment_form #comment_form_container{
