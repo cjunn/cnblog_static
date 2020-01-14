@@ -553,6 +553,10 @@ a{
     height:20px
 }
 
+#cnblogs_post_body ol li {
+    margin-bottom: 3px;
+}
+
 
 /*分类样式*/
 
@@ -778,7 +782,7 @@ div#green_channel img {
     text-align: center;
     position: relative;
     bottom: 16px;
-    left: 110px;
+    left: 70px;
     border-bottom: 1px dashed #e9e9e9
 }
 
@@ -1026,9 +1030,6 @@ div#green_channel img {
 .comment_btn:hover {
     background: #333
 }
-#blog-comments-placeholder{
-    display:none;
-}
 #comment_form a{
     font-size:12px;
 }
@@ -1275,4 +1276,82 @@ body{
 
 .login_tips{
     font-size: 12px;
+}
+
+.feedback_area_title{
+    margin-top:10px;
+    font: normal normal 14px/35px "Microsoft YaHei";
+}
+#blog-comments-placeholder .feedbackItem{
+
+}
+#blog-comments-placeholder .feedbackItem:not(:nth-last-child(2)):after{
+    font-size:2px;
+    content:"..........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................";
+    color:rgba(200,200,200,0.4);
+
+}
+#blog-comments-placeholder .feedbackItem .feedbackListSubtitle {
+    font-size:14px;
+    color: rgba(80,80,80,0.8);
+    padding-bottom:4px;
+}
+#blog-comments-placeholder .feedbackItem .feedbackListSubtitle .comment_date{
+    padding-left:5px;
+    padding-right:5px;
+}
+#blog-comments-placeholder .feedbackItem .feedbackListSubtitle .comment_date:hover{
+    color:#ff6600!important;
+    cursor:pointer;
+}
+#blog-comments-placeholder .feedbackItem .feedbackListSubtitle .comment_actions a:first-child{
+    padding-right:2px;
+}
+#blog-comments-placeholder .feedbackItem .feedbackCon{
+    position:relative;
+}
+
+#blog-comments-placeholder .feedbackItem .comment_vote a:last-child{
+    padding-left:2px;
+}
+
+#blog-comments-placeholder .feedbackItem .feedbackCon .blog_comment_body{
+    overflow:visible;
+}
+
+#blog-comments-placeholder .feedbackItem .feedbackCon .comment_vote{
+    padding-right:0px;
+    font-size:14px;
+    color: rgba(80,80,80,0.8);
+    display:inline-block;
+    float:right;
+}
+#comment_form #comment_nav{
+    margin:0px;
+    padding:0px;
+    position:relative;
+    top:15px;
+}
+
+#comment_form #comment_form_container{
+    margin:0px;
+    padding:0px;
+
+}
+#comment_form #comment_form_container #commentform_title{
+    margin:0px;
+    padding:0px;
+    margin-top:2px;
+}
+
+/*评论区*/
+#blog-comments-placeholder a:hover{
+    color:#ff6600!important;
+}
+.comment_vote a:hover{
+    color:#ff6600!important;
+}
+.feedbackManage {
+    display:inline-block;
+    float:right;
 }
