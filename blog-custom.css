@@ -1355,3 +1355,11 @@ body{
     display:inline-block;
     float:right;
 }
+
+/*表格样式*/
+#cnblogs_post_body th, #cnblogs_post_body td, .cnblogs-post-body th, .cnblogs-post-body td{
+    padding: 4px 7px;
+}
+#cnblogs_post_body table, .cnblogs-post-body table{
+    word-break: normal;
+}
