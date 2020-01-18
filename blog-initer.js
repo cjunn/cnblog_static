@@ -384,6 +384,13 @@ $(function(){
         $("#sidebar_recentposts a").each(setTitle);
         /*阅读排行榜*/
         $("#TopViewPostsBlock a").each(setTitle);
+        /*评论区*/
+        $("#sidebar_recentcomments a").each(setTitle);
+        $("#sidebar_recentcomments .recent_comment_body").each(setTitle);
+        /*评论排行*/
+        $("#sidebar_topcommentedposts a").each(setTitle);
+        /*推荐排行*/
+        $("#topdigg_posts_wrap a").each(setTitle);
     })();
     setTimeout(function(){
         $("#loading").fadeOut(500);
