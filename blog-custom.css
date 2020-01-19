@@ -516,9 +516,7 @@ a{
     margin-bottom:0px !important;
 }
 #cnblogs_post_body>pre {
-    margin: 0px 15px!important;
-    padding:0px 15px!important;
-    margin-bottom:20px !important;
+    margin-bottom:0px !important;
 }
 .postBody table{
     width:100%;
@@ -1355,11 +1353,30 @@ body{
     display:inline-block;
     float:right;
 }
-
+/*正文样式*/
 /*表格样式*/
 #cnblogs_post_body th, #cnblogs_post_body td, .cnblogs-post-body th, .cnblogs-post-body td{
     padding: 4px 7px;
 }
 #cnblogs_post_body table, .cnblogs-post-body table{
-    word-break: normal;
+    word-break: break-all;
+}
+#cnblogs_post_body h1{
+    margin:0px;
+    padding:0px;
+}
+#cnblogs_post_body h1:nth-child(n+2){
+    margin-top:20px;
+}
+
+#cnblogs_post_body h1:after{
+    font-size:2px;
+    content:"..........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................";
+    color:rgba(200,200,200,0.4);
+    white-space:nowrap;
+    position:relative;
+    float:right;
+    height:0px;
+    top:-15px;
+
 }
