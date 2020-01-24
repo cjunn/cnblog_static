@@ -1368,14 +1368,34 @@ body{
     margin-top:20px;
 }
 
-#cnblogs_post_body h1:after{
-    font-size:2px;
-    content:"..........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................";
-    color:rgba(200,200,200,0.4);
-    white-space:nowrap;
-    position:relative;
-    float:right;
-    height:0px;
-    top:-15px;
+#cnblogs_post_body
+{
+    color: black;
+    font: 0.875em/1.5em "Microsoft YaHei" , "PTSans" , "Arial" ,sans-serif;
+    font-size: 15px;
+}
+/*正文标题自动标号*/
+.postBody h1 {
+    counter-increment: counter_h1;
+    counter-reset: counter_h2;
+}
+.postBody h1::before {
+    content: counter(counter_h1)". ";
+}
+.postBody h2 {
+    counter-increment: counter_h2;
+}
+.postBody h2::before {
+    content: counter(counter_h1)"."counter(counter_h2)" ";
+}
 
+
+.postBody p+h1{
+    margin-top:25px !important;
+}
+.postBody p+h2{
+    margin-top:20px !important;
+}
+.postBody p+h3{
+    margin-top:15px !important;
 }
