@@ -511,8 +511,6 @@ a{
 }
 #cnblogs_post_body img{
     max-width: 100%;
-    margin:0px 15px 0px 18px;
-    padding:0 10px 0 10px;
     border-radius: 5px;
     margin-bottom:0px !important;
 }
