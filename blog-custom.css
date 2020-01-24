@@ -1363,6 +1363,7 @@ body{
 #cnblogs_post_body h1{
     margin:0px;
     padding:0px;
+    word-break: break-all;
 }
 #cnblogs_post_body h1:nth-child(n+2){
     margin-top:20px;
