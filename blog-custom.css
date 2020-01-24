@@ -1399,3 +1399,9 @@ body{
 .postBody p+h3{
     margin-top:15px !important;
 }
+blockquote {
+    background: none;
+    border: 2px solid #efefef;
+    margin: 5px 0px 5px 0px;
+    padding: 5px;
+}
