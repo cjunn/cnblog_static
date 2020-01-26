@@ -1385,11 +1385,18 @@ body{
 }
 .postBody h2 {
     counter-increment: counter_h2;
+    counter-reset: counter_h3;
 }
 .postBody h2::before {
     content: counter(counter_h1)"."counter(counter_h2)" ";
 }
 
+.postBody h3 {
+    counter-increment: counter_h3;
+}
+.postBody h3::before {
+    content: counter(counter_h1)"."counter(counter_h2)"."counter(counter_h3);
+}
 
 .postBody p+h1{
     margin-top:25px !important;
