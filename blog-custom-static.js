@@ -39,15 +39,16 @@ window._static_ ={
     _static_.poetry=poetrys[Math.floor(Math.random()*poetrys.length)];
     /*背景随机*/
     var backgroundImgs=[
-        "https://cdn.jsdelivr.net/gh/cjunn/cnblog_static@v2.7/blog-bg/bg1.jpg",
-        "https://cdn.jsdelivr.net/gh/cjunn/cnblog_static@v2.7/blog-bg/bg2.jpg",
-        "https://cdn.jsdelivr.net/gh/cjunn/cnblog_static@v2.7/blog-bg/bg3.jpg",
-        "https://cdn.jsdelivr.net/gh/cjunn/cnblog_static@v2.7/blog-bg/bg4.jpg",
-        "https://cdn.jsdelivr.net/gh/cjunn/cnblog_static@v2.7/blog-bg/bg5.jpg",
-        "https://cdn.jsdelivr.net/gh/cjunn/cnblog_static@v2.7/blog-bg/bg6.jpg",
-        "https://cdn.jsdelivr.net/gh/cjunn/cnblog_static@v2.7/blog-bg/bg7.jpg",
-        "https://cdn.jsdelivr.net/gh/cjunn/cnblog_static@v2.7/blog-bg/bg8.jpg",
-        "https://cdn.jsdelivr.net/gh/cjunn/cnblog_static@v2.7/blog-bg/bg9.jpg"
+        "bg1.jpg",
+        "bg2.jpg",
+        "bg3.jpg",
+        "bg4.jpg",
+        "bg5.jpg",
+        "bg6.jpg",
+        "bg7.jpg",
+        "bg8.jpg",
+        "bg9.jpg"
     ];
-    _static_.backgroundImg=backgroundImgs[Math.floor(Math.random()*backgroundImgs.length)];
+    var preUrl=window.blo_custom_ctx+window.blo_custom_version+"/blog-bg/";
+    _static_.backgroundImg=preUrl+backgroundImgs[Math.floor(Math.random()*backgroundImgs.length)];
 })();
