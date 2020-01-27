@@ -20,7 +20,8 @@ window._static_ ={
     poetry:{
         line:'',
         desc:''
-    }
+    },
+    logService:"http://106.13.52.212/blog-custom/log.gif"
 };
 (function(){
     /*古诗随机*/
