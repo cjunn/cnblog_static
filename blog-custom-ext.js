@@ -38,9 +38,9 @@ $(function(){
                 url: userNameUrl,
                 dataType: "jsonp",
                 success: function(str) {
-                    var matchUser=str.match(/(?<=cnblogs.com\/u\/)(.*?)(?=\/)/);
-                    if(matchUser){
-                        var user=(matchUser[0]).trim();
+                    var matchUser=str.match(/cnblogs.com\/u\/(.*?)\//);
+                    if(matchUser && matchUser[1]){
+                        var user=(matchUser[1]).trim();
                         if(user==_static_.logAuthor){
                             data.isNotUpload=true;
                         }else{
