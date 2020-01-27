@@ -93,11 +93,17 @@ $(function(){
     }
     /*获取diggit属性*/
     function loadDiggitAttr(){
+        //组装返回votePost(12235513,'Digg')
         var diggit=$("#div_digg .diggit");
-        if(diggit.size()==0){
-            throw "diggit为空值";
+        if(diggit.size()>0){
+            return diggit.attr("onclick");
         }
-        return diggit.attr("onclick");
+        diggit=$("a[onclick^='AddToWz(']:contains(收藏)");
+        if(diggit.size()>0){
+            var digId=diggit.attr("onclick").split(")")[0].replace("AddToWz(","");
+            return "votePost("+digId+",'Digg')";
+        }
+        throw "diggit为空值";
     }
     /*显示遮罩*/
     function showMask(){
