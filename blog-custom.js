@@ -343,37 +343,43 @@ $(function(){
     })();
     /*初始化右导航栏*/
     (function(){
-        if(!isPostDetail()){
-            return;
+        try {
+            if (!isPostDetail()) {
+                return;
+            }
+            /*初始化toc所需要的数据格式*/
+            $(".postBody").attr("data-toc", "#toc");
+            $("#mainContent").before("<div id=\"toc\"></div>");
+            var tocHelper = new TocHelper({
+                dom: 'div[data-toc]',
+                offsetBody: document.querySelector('#home')
+            })
+            tocHelper.reset();
+
+            function resetTocLoc() {
+                var mainContentWidth = $("#mainContent").outerWidth();
+                $("#toc").css("left", "calc(50% + " + ((mainContentWidth / 2) + 5) + "px)")
+            }
+
+            resetTocLoc();
+            $(window).resize(resetTocLoc);
+            /*初始化toc移动事件*/
+            (function () {
+                var mainTop = $("#main").offset().top;
+                $("#toc").css("cssText", $("#toc").attr("style") + ";top:" + mainTop + "px!important;");
+                $(window).scroll(function (event) {
+                    var winTop = $(window).scrollTop();
+                    if (winTop <= mainTop) {
+                        var winTop = $(window).scrollTop();
+                        $("#toc").css("cssText", $("#toc").attr("style") + ";top:" + (mainTop - winTop) + "px!important;");
+                    } else {
+                        $("#toc").css("cssText", $("#toc").attr("style") + ";top:5px!important;");
+                    }
+                });
+            })();
+        }catch(err) {
+            console.log("init_top_error")
         }
-        /*初始化toc所需要的数据格式*/
-        $(".postBody").attr("data-toc","#toc");
-        $("#mainContent").before("<div id=\"toc\"></div>");
-        var tocHelper = new TocHelper({
-            dom: 'div[data-toc]',
-            offsetBody: document.querySelector('#home')
-        })
-        tocHelper.reset();
-        function resetTocLoc(){
-            var mainContentWidth=$("#mainContent").outerWidth();
-            $("#toc").css("left","calc(50% + "+((mainContentWidth/2)+5)+"px)")
-        }
-        resetTocLoc();
-        $(window).resize(resetTocLoc);
-        /*初始化toc移动事件*/
-        (function(){
-            var mainTop=$("#main").offset().top;
-            $("#toc").css("cssText",$("#toc").attr("style")+";top:"+mainTop+"px!important;");
-            $(window).scroll(function(event){
-                var winTop=$(window).scrollTop();
-                if(winTop<=mainTop){
-                    var winTop=$(window).scrollTop();
-                    $("#toc").css("cssText",$("#toc").attr("style")+";top:"+(mainTop-winTop)+"px!important;");
-                }else{
-                    $("#toc").css("cssText",$("#toc").attr("style")+";top:5px!important;");
-                }
-            });
-        })();
     })();
     /*初始化复制按钮*/
     (function(){
