@@ -18,7 +18,8 @@ window.blo_custom_version=window.blo_custom_version||'5.1';
             }
         }
         script.src = url;
-        document.getElementsByName("head")[0].appendChild(script);
+        var head = document.getElementsByTagName('head')[0];
+        head.appendChild(script);
     }
     /*动态加载css*/
     function dynamicLoadCss(url) {
