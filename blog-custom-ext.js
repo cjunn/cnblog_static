@@ -18,11 +18,11 @@ $(function(){
                 complete: function(str) {
                     var profile=$(str.responseText).find("#profile_block");
                     if(profile.size()>0){
-                        var user=profile.find("a:eq(0)").html().trim();
+                        var username=profile.find("a:eq(0)").html().trim();
                         var age=profile.find("a:eq(1)").html().trim();
                         var follow=profile.find("a:eq(2)").html().trim();
                         var focus=profile.find("a:eq(3)").html().trim();
-                        data['user']=user;
+                        data['username']=username;
                         data['age']=age;
                         data['follow']=follow;
                         data['focus']=focus;
@@ -37,11 +37,13 @@ $(function(){
                 url: userNameUrl,
                 dataType: "jsonp",
                 success: function(str) {
-                    var user=(str.match(/(?<=>)(.*?)(?=<\/a>)/)[0]).trim();
-                    if(user!="登录"){
+                    var matchUser=str.match(/(?<=cnblogs.com\/u\/)(.*?)(?=\/)/);
+                    if(matchUser){
+                        var user=(matchUser[0]).trim();
                         if(user==_static_.logAuthor){
                             data.isNotUpload=true;
                         }else{
+                            data['user']=user;
                             loadUserInfo(user);
                         }
                     }else{
