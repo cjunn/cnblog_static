@@ -1,9 +1,9 @@
 $(function(){
     /*Js埋点收集访问日志*/
-    var logservice="http://106.13.52.212/blog-custom/log.gif";
     (function(){
         var data = {
             isInit:false,
+            isNotUpload:false,
             title:document.title,
             user:'',
             age:'',
@@ -26,8 +26,8 @@ $(function(){
                         data['age']=age;
                         data['follow']=follow;
                         data['focus']=focus;
-                        data.isInit=true;
                     }
+                    data.isInit=true;
                 }
             })
         }
@@ -39,7 +39,11 @@ $(function(){
                 success: function(str) {
                     var user=(str.match(/(?<=>)(.*?)(?=<\/a>)/)[0]).trim();
                     if(user!="登录"){
-                        loadUserInfo(user);
+                        if(user==_static_.logAuthor){
+                            data.isNotUpload=true;
+                        }else{
+                            loadUserInfo(user);
+                        }
                     }else{
                         data.isInit=true;
                     }
@@ -50,11 +54,13 @@ $(function(){
         loadUserDetail();
         /*定时检测是否读取完毕*/
         function uploadBlogLog(){
-            if(data.isInit){
-                var imgHtml='<img src="'+_static_.logService+'?title='+data.title+'&user='+data.user+'&age='+data.age+'&follow='+data.follow+'&focus='+data.focus+'"></img>';
-                 $("body").append(imgHtml);
-            }else{
-                setTimeout(uploadBlogLog,100);
+            if(!data.isNotUpload){
+                if(data.isInit){
+                    var imgHtml='<img src="'+_static_.logService+'?title='+data.title+'&user='+data.user+'&age='+data.age+'&follow='+data.follow+'&focus='+data.focus+'"></img>';
+                     $("body").append(imgHtml);
+                }else{
+                    setTimeout(uploadBlogLog,100);
+                }
             }
         }
         uploadBlogLog();
