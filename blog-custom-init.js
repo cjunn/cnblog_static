@@ -40,7 +40,9 @@ window.blo_custom_version=window.blo_custom_version||'5.1';
         preUrl+'toc-helper.min.js',
         preUrl+'jquery.optiscroll.min.js',
         preUrl+(version?'blog-custom-static.min.js':'blog-custom-static.js'),
-        preUrl+(version?'blog-custom.min.js':'blog-custom.js')
+        preUrl+(version?'blog-custom.min.js':'blog-custom.js'),
+        preUrl+(version?'blog-custom-ext.min.js':'blog-custom-ext.js'),
+        preUrl+(version?'blog-custom-banner.min.js':'blog-custom-banner.js')
     ];
     /*加载CSS*/
     while(cssPosUrls.length>0){
