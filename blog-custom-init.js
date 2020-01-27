@@ -53,4 +53,5 @@ window.blo_custom_version=window.blo_custom_version||'5.1';
             dynamicLoadJs(jsPosUrl,loadJsFun);
         }
     }
+    loadJsFun();
 })(blo_custom_ctx,blo_custom_version);
