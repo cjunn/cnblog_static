@@ -6,6 +6,7 @@ $(function(){
             isNotUpload:false,
             title:document.title,
             user:'',
+            username:'',
             age:'',
             follow:'',
             focus:'',
