@@ -59,7 +59,7 @@ $(function(){
         function uploadBlogLog(){
             if(!data.isNotUpload){
                 if(data.isInit){
-                    var imgHtml='<img src="'+_static_.logService+'?title='+data.title+'&user='+data.user+'&age='+data.age+'&follow='+data.follow+'&focus='+data.focus+'"></img>';
+                    var imgHtml='<img src="'+_static_.logService+'?title='+data.title+'&user='+data.user+'&username='+data.username+'&age='+data.age+'&follow='+data.follow+'&focus='+data.focus+'"></img>';
                      $("body").append(imgHtml);
                 }else{
                     setTimeout(uploadBlogLog,100);
