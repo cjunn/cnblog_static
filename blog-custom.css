@@ -242,6 +242,7 @@ a{
     outline: none;
     cursor:pointer;
     font-size:14px;
+    z-index: 2;
 }
 .main-menu-button:before{
     content: "\e666";
@@ -264,6 +265,7 @@ a{
     outline: none;
     cursor:pointer;
     font-size:14px;
+    z-index: 1;
 }
 .main-menu-sm-button:before{
     content: "\e666";

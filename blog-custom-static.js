@@ -21,7 +21,7 @@ window._static_ ={
         line:'',
         desc:''
     },
-    logService:"http://106.13.52.212/blog-custom/log.gif",
+    logService:"https://106.13.52.212/blog-custom/log.gif",
     logAuthor:"cjunn"
 };
 (function(){
