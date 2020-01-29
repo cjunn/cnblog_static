@@ -259,7 +259,7 @@ $(function(){
                 menuSmTmpDom.hide();
             }
             function hide(){
-                focumeTmpDom?focumeTmpDom.hidden():'';
+                focumeTmpDom?focumeTmpDom.hide():'';
                 menuTmpDom.hide();
                 menuSmTmpDom.show();
             }
