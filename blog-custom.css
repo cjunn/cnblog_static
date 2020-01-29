@@ -248,7 +248,7 @@ a{
 }
 .main-focume-button{
     left :20px;
-    top :60px;
+    top :58px;
 }
 .main-focume-button:before {
     content: "\e62c";
@@ -276,7 +276,14 @@ a{
     font-size:14px;
     z-index: 1;
 }
-
+.main-focume-sm-button{
+    left :-3px;
+    top :40px;
+}
+.main-focume-sm-button:before{
+    content: "\e62c";
+    padding-right:8px;
+}
 /*小按钮*/
 .main-menu-sm-button{
     left :-3px;

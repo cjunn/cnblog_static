@@ -201,6 +201,11 @@ $(function(){
             focumeTmpDom=$("<button class='iconfont main-button main-focume-button' onclick=\"follow('"+blobid+"')\"><span>关注我</span></button>");
             headTmpDom.append(focumeTmpDom);
         })
+        var focumeSmTmpDom="";
+        loadNetBlogIdBack(function(blobid){
+            focumeSmTmpDom=$("<button class='iconfont main-sm-button main-focume-sm-button'><span> </span></button>");
+            headTmpDom.append(focumeSmTmpDom);
+        })
         /*初始化左侧菜单按钮*/
         var menuTmpDom=$("<button class='iconfont main-button main-menu-button'><span>菜单</span></button>");
         menuTmpDom.click(openMenu)
@@ -257,9 +262,11 @@ $(function(){
                 menuTmpDom.show();
                 focumeTmpDom?focumeTmpDom.show():'';
                 menuSmTmpDom.hide();
+                focumeSmTmpDom?focumeSmTmpDom.hide():'';
             }
             function hide(){
                 focumeTmpDom?focumeTmpDom.hide():'';
+                focumeSmTmpDom?focumeSmTmpDom.show():'';
                 menuTmpDom.hide();
                 menuSmTmpDom.show();
             }
