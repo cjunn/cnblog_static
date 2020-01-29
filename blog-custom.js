@@ -195,11 +195,11 @@ $(function(){
         headTmpDom.css('background','url('+_static_.backgroundImg+') center center / cover no-repeat rgb(34, 34, 34)')
         $("#home").before(headTmpDom);
         /*初始化左侧菜单按钮*/
-        var menuTmpDom=$("<button class='iconfont main-menu-button'><span>菜单</span></button>");
+        var menuTmpDom=$("<button class='iconfont main-button main-menu-button'><span>菜单</span></button>");
         menuTmpDom.click(openMenu)
         headTmpDom.append(menuTmpDom);
         /*小按钮*/
-        var menuSmTmpDom=$("<button class='iconfont main-menu-sm-button'><span> </span></button>");
+        var menuSmTmpDom=$("<button class='iconfont main-sm-button main-menu-sm-button'><span> </span></button>");
         menuSmTmpDom.hide();
         menuSmTmpDom.click(openMenu)
         headTmpDom.append(menuSmTmpDom);
