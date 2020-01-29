@@ -1419,3 +1419,7 @@ blockquote {
     margin: 5px 0px 5px 0px;
     padding: 5px;
 }
+
+#p_b_follow{
+    display: none;
+}
