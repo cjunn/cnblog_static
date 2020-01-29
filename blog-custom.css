@@ -248,8 +248,13 @@ a{
 }
 .main-focume-button{
     left :20px;
-    top :50px;
+    top :60px;
 }
+.main-focume-button:before {
+    content: "\e62c";
+    padding-right:8px;
+}
+
 .main-menu-button:before{
     content: "\e666";
     padding-right:8px;

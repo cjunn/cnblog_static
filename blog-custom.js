@@ -198,7 +198,7 @@ $(function(){
         var focumeTmpDom="";
         /*初始化foucume按钮*/
         loadNetBlogIdBack(function(blobid){
-            focumeTmpDom=$("<button class='iconfont main-button main-focume-button' onclick=\"follow('"+blobid+"')\"><span>菜单</span></button>");
+            focumeTmpDom=$("<button class='iconfont main-button main-focume-button' onclick=\"follow('"+blobid+"')\"><span>关注我</span></button>");
             headTmpDom.append(focumeTmpDom);
         })
         /*初始化左侧菜单按钮*/
