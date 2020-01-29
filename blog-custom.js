@@ -204,6 +204,7 @@ $(function(){
         var focumeSmTmpDom="";
         loadNetBlogIdBack(function(blobid){
             focumeSmTmpDom=$("<button class='iconfont main-sm-button main-focume-sm-button'><span> </span></button>");
+            focumeSmTmpDom.hide();
             headTmpDom.append(focumeSmTmpDom);
         })
         /*初始化左侧菜单按钮*/
