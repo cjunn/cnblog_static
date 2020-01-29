@@ -5,6 +5,7 @@ window.blo_custom_version=window.blo_custom_version||'6.5';
 (function(ctx,version){
     /*顺序加载script*/
     function dynamicLoadJs(url, callback) {
+        /**/
         var script = document.createElement("script");
         script.type = "text/javascript";
         if (script.readyState) {
