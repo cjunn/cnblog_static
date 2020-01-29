@@ -194,6 +194,13 @@ $(function(){
         var headTmpDom=$("<div class=\"main-header\"></div>");
         headTmpDom.css('background','url('+_static_.backgroundImg+') center center / cover no-repeat rgb(34, 34, 34)')
         $("#home").before(headTmpDom);
+
+        var focumeTmpDom="";
+        /*初始化foucume按钮*/
+        loadNetBlogIdBack(function(blobid){
+            focumeTmpDom=$("<button class='iconfont main-button main-focume-button' onclick=\"follow('"+blobid+"')\"><span>菜单</span></button>");
+            headTmpDom.append(focumeTmpDom);
+        })
         /*初始化左侧菜单按钮*/
         var menuTmpDom=$("<button class='iconfont main-button main-menu-button'><span>菜单</span></button>");
         menuTmpDom.click(openMenu)
@@ -248,9 +255,11 @@ $(function(){
         $(window).scroll(function(event){
             function show(){
                 menuTmpDom.show();
+                focumeTmpDom?focumeTmpDom.show():'';
                 menuSmTmpDom.hide();
             }
             function hide(){
+                focumeTmpDom?focumeTmpDom.hidden():'';
                 menuTmpDom.hide();
                 menuSmTmpDom.show();
             }

@@ -246,6 +246,10 @@ a{
     left :20px;
     top :20px;
 }
+.main-focume-button{
+    left :20px;
+    top :50px;
+}
 .main-menu-button:before{
     content: "\e666";
     padding-right:8px;
