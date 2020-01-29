@@ -1,5 +1,7 @@
+/*
 window.blo_custom_ctx=window.blo_custom_ctx||"https://cdn.jsdelivr.net/gh/cjunn/cnblog_static@v";
 window.blo_custom_version=window.blo_custom_version||'6.5';
+*/
 (function(ctx,version){
     /*顺序加载script*/
     function dynamicLoadJs(url, callback) {
